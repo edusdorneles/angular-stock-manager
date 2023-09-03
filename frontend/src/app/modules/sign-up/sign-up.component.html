@@ -1,0 +1,16 @@
+<main class="container-background h-screen flex items-center justify-center">
+  <div class="w-[420px] p-4 rounded-md bg-white shadow-md flex flex-col gap-4">
+    <div class="flex flex-col">
+      <h1 class="font-bold text-2xl">Cadastro</h1>
+      <p>Insira os dados e crie sua conta.</p>
+    </div>
+
+    <form class="flex flex-col gap-2">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="email" placeholder="E-mail:">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Senha:">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Confirmar senha:">
+      <button class="bg-primary hover:bg-hover-primary w-full py-2 rounded-md text-white transition-all" type="submit">Criar conta</button>
+      <button [routerLink]="['/sign-in']" class="hover:bg-gray-200 w-full py-2 rounded-md text-primary transition-all" type="button">Entrar</button>
+    </form>
+  </div>
+</main>

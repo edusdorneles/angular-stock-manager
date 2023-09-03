@@ -3,11 +3,11 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss'],
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss'],
   imports: [RouterModule]
 })
-export class SignInComponent {
+export class SignUpComponent {
 
 }
