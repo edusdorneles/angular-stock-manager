@@ -7,10 +7,10 @@
       <p>Faça login com sua conta existente.</p>
     </div>
 
-    <form class="flex flex-col gap-2">
-      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="email" placeholder="E-mail:">
-      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Senha:">
-      <button class="bg-primary hover:bg-hover-primary w-full py-2 rounded-md text-white transition-all" type="submit">Entrar</button>
+    <form class="flex flex-col gap-2" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="email" placeholder="E-mail:" formControlName="email">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Senha:" formControlName="password">
+      <button class="bg-primary hover:bg-hover-primary w-full py-2 rounded-md text-white transition-all disabled:cursor-not-allowed" type="submit" [disabled]="!this.form.valid">Entrar</button>
       <button [routerLink]="['/sign-up']" class="hover:bg-gray-200 w-full py-2 rounded-md text-primary transition-all" type="button">Criar conta</button>
     </form>
   </div>
