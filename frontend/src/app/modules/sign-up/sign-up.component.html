@@ -8,9 +8,9 @@
     </div>
 
     <form class="flex flex-col gap-2" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="text" placeholder="Nome:" formControlName="name">
       <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="email" placeholder="E-mail:" formControlName="email">
       <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Senha:" formControlName="password">
-      <input class="outline-primary border border-gray-300 px-4 py-2 rounded-md w-full" type="password" placeholder="Confirmar senha:" formControlName="confirmPassword">
       <button class="bg-primary hover:bg-hover-primary w-full py-2 rounded-md text-white transition-all disabled:cursor-not-allowed" type="submit" [disabled]="!this.form.valid">Criar conta</button>
       <button [routerLink]="['/sign-in']" class="hover:bg-gray-200 w-full py-2 rounded-md text-primary transition-all" type="button">Entrar</button>
     </form>
